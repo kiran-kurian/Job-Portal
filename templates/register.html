@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h2>Register</h2>
+<form method="post">
+  <input type="text" name="username" class="form-control mb-2" placeholder="Username" required>
+  <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
+  <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
+  <select name="role" class="form-control mb-2" required>
+    <option value="job_seeker">Job Seeker</option>
+    <option value="employer">Employer</option>
+  </select>
+  <button type="submit" class="btn btn-success">Register</button>
+</form>
+{% endblock %}

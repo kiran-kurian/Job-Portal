@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Applications{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-4">Applications Received</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Job Title</th>
+          <th scope="col">Username</th>
+          <th scope="col">E-Mail</th>
+          <th scope="col">Applied On</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for application, user, job in applications %}
+        <tr>
+          <td>{{ job.title }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ application.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="3" class="text-center">No applications found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
