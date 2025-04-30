@@ -51,7 +51,7 @@ This is a simple **Job Portal** web application built using **Flask**, **SQLite*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/job-portal-flask.git
+git clone https://github.com/kiran-kurian/Job-Portal.git
 cd Job Portal
 ```
 
@@ -92,7 +92,7 @@ Follow the prompts to create an admin account.
 python app.py
 ```
 
-Visit: [http://localhost:5000](http://localhost:5000)
+Visit: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
