@@ -115,7 +115,6 @@ Check `requirements.txt`, includes:
 Flask
 Flask_SQLAlchemy
 Flask_Migrate
-Werkzeug
 ```
 
 ---
