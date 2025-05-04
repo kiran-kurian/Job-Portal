@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
+
 {% block content %}
-<h1>Welcome to the Job Portal</h1>
-<p>Your gateway to finding jobs or hiring candidates.</p>
+<div class="container text-center mt-5">
+  <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold text-primary">Welcome to JobPortal</h1>
+      <p class="fs-5 text-secondary mt-3">Your gateway to finding jobs or hiring top talent.</p>
+      <div class="mt-4">
+        <a href="{{ url_for('register') }}" class="btn btn-success btn-lg me-2">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title text-success">🔍 Job Seekers</h5>
+          <p class="card-text text-muted">Find the perfect job opportunities tailored to your skills and location.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title text-primary">🏢 Employers</h5>
+          <p class="card-text text-muted">Post jobs and discover candidates to grow your team effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

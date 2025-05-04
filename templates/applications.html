@@ -3,16 +3,16 @@
 
 {% block content %}
 <div class="container mt-4">
-  <h2 class="mb-4">Applications Received</h2>
+  <h2 class="mb-4 text-center">📄 Applications Received</h2>
 
   <div class="table-responsive">
-    <table class="table table-bordered table-hover align-middle">
-      <thead class="table-dark">
+    <table class="table table-bordered table-hover align-middle shadow-sm rounded bg-white">
+      <thead class="table-primary">
         <tr>
-          <th scope="col">Job Title</th>
-          <th scope="col">Username</th>
-          <th scope="col">E-Mail</th>
-          <th scope="col">Applied On</th>
+          <th scope="col"><i class="bi bi-briefcase-fill"></i> Job Title</th>
+          <th scope="col"><i class="bi bi-person-fill"></i> Username</th>
+          <th scope="col"><i class="bi bi-envelope-fill"></i> E-Mail</th>
+          <th scope="col"><i class="bi bi-clock-fill"></i> Applied On</th>
         </tr>
       </thead>
       <tbody>
@@ -25,11 +25,14 @@
         </tr>
         {% else %}
         <tr>
-          <td colspan="3" class="text-center">No applications found.</td>
+          <td colspan="4" class="text-center text-muted">No applications found.</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
 </div>
+
+<!-- Bootstrap Icons CDN (include in base.html if not already) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 {% endblock %}

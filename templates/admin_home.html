@@ -1,38 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container mt-4">
-  <h2>Welcome, Admin</h2>
+  <h2 class="mb-4 text-center">👨‍💼 Welcome, Admin</h2>
 
-  <div class="row mt-4">
+  <div class="row text-center g-4">
     <div class="col-md-4">
-      <div class="card text-white bg-primary mb-3">
+      <div class="card text-white bg-gradient-primary shadow" style="background: linear-gradient(135deg, #007bff, #0056b3);">
         <div class="card-body">
-          <h5 class="card-title">Total Users</h5>
-          <p class="card-text display-6">{{ user_count }}</p>
+          <h5 class="card-title"><i class="bi bi-people-fill"></i> Total Users</h5>
+          <p class="card-text display-6 fw-bold">{{ user_count }}</p>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card text-white bg-success mb-3">
+      <div class="card text-white bg-gradient-success shadow" style="background: linear-gradient(135deg, #28a745, #1e7e34);">
         <div class="card-body">
-          <h5 class="card-title">Total Jobs</h5>
-          <p class="card-text display-6">{{ job_count }}</p>
+          <h5 class="card-title"><i class="bi bi-briefcase-fill"></i> Total Jobs</h5>
+          <p class="card-text display-6 fw-bold">{{ job_count }}</p>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card text-white bg-warning mb-3">
+      <div class="card text-white bg-gradient-warning shadow" style="background: linear-gradient(135deg, #ffc107, #d39e00);">
         <div class="card-body">
-          <h5 class="card-title">Total Applications</h5>
-          <p class="card-text display-6">{{ application_count }}</p>
+          <h5 class="card-title"><i class="bi bi-file-earmark-check-fill"></i> Total Applications</h5>
+          <p class="card-text display-6 fw-bold">{{ application_count }}</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="mt-4">
-    <a href="{{ url_for('manage_users') }}" class="btn btn-outline-primary">Manage Users</a>
-    <a href="{{ url_for('jobs') }}" class="btn btn-outline-secondary">Manage Jobs</a>
+  <div class="text-center mt-5">
+    <a href="{{ url_for('manage_users') }}" class="btn btn-lg btn-outline-primary me-2">Manage Users</a>
+    <a href="{{ url_for('jobs') }}" class="btn btn-lg btn-outline-secondary">Manage Jobs</a>
   </div>
 </div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 {% endblock %}

@@ -1,12 +1,35 @@
 {% extends 'base.html' %}
 {% block title %}Post Job{% endblock %}
+
 {% block content %}
-<h2>Post a Job</h2>
-<form method="post">
-  <input type="text" name="title" class="form-control mb-2" placeholder="Job Title" required>
-  <textarea name="description" class="form-control mb-2" placeholder="Job Description" required></textarea>
-  <input type="text" name="location" class="form-control mb-2" placeholder="Location" required>
-  <input type="text" name="salary" class="form-control mb-2" placeholder="Salary" required>
-  <button type="submit" class="btn btn-success">Post Job</button>
-</form>
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-success text-white text-center">
+      <h3>Post a New Job</h3>
+    </div>
+    <div class="card-body">
+      <form method="post">
+        <div class="mb-3">
+          <label class="form-label">Job Title</label>
+          <input type="text" name="title" class="form-control" placeholder="Enter job title" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Job Description</label>
+          <textarea name="description" class="form-control" rows="4" placeholder="Enter job description" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Location</label>
+          <input type="text" name="location" class="form-control" placeholder="Enter job location" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Salary (in ₹)</label>
+          <input type="text" name="salary" class="form-control" placeholder="Enter salary amount" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success px-4">Post Job</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}

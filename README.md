@@ -9,7 +9,7 @@ This is a simple **Job Portal** web application built using **Flask**, **SQLite*
 - **User Authentication** (Register/Login/Logout)
 - **Admin Panel**
   - View job stats
-  - Manage users (activate/deactivate)
+  - Manage users
 - **Employer Dashboard**
   - Post jobs
   - View applicants
